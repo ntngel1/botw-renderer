@@ -1,0 +1,15 @@
+[package]
+name = "botw-formats"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+roead.workspace = true
+thiserror.workspace = true
+# Parsed parameters serialize into the baked assets (`bake`).
+serde.workspace = true
+
+[dev-dependencies]
+# The game's parameter names, for examples that print AAMP documents.
+roead = { workspace = true, features = ["aamp-names"] }

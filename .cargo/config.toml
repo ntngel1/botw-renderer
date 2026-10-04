@@ -1,0 +1,8 @@
+# Keep build artifacts isolated from other checkouts and worktrees.
+[build]
+target-dir = "target"
+
+# Release by default: `cargo bake …`, `cargo render …`.
+[alias]
+bake = "run --release -p bake --"
+render = "run --release -p render --"

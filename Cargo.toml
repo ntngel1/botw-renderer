@@ -1,0 +1,43 @@
+[workspace]
+members = [
+    "crates/botw-formats",
+    "crates/asset-format",
+    "crates/bake",
+    "crates/render",
+]
+default-members = ["crates/render"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace.dependencies]
+botw-formats = { path = "crates/botw-formats" }
+asset-format = { path = "crates/asset-format" }
+bevy = "0.19.1"
+roead = { version = "1.0.0", default-features = false, features = ["sarc", "byml", "aamp"] }
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+ron = "0.12"
+zstd = "0.13"
+toml = "0.9"
+serde_json = "1"
+glam = "0.32"
+bevy_mikktspace = "1.0.0"
+
+# Bevy is unusably slow without optimisation; keep our own crates debuggable.
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+# Our crates build incrementally in release too: tuning a constant or a
+# shader rebuilds in seconds. Scripts and aliases default to release.
+[profile.release.package.render]
+incremental = true
+
+[profile.release.package.bake]
+incremental = true
