@@ -1,4 +1,4 @@
-# botw рендерер: agent instructions
+# botw renderer: agent instructions
 
 BotW world renderer: a free camera, weather, effects and character animation
 previews from baked assets. Setup and rendering status: [README.md](README.md).
@@ -13,7 +13,8 @@ previews from baked assets. Setup and rendering status: [README.md](README.md).
 - `render` reads only `assets/`; only `bake` reads the game dump
   (`botw-formats`). Formats of `assets/` live in `asset-format`.
 - Never commit game data or anything converted from it (`assets/`, captures
-  and `renderer.toml` are git-ignored).
+  and `renderer.toml` are git-ignored). Selected renderer screenshots in
+  `docs/screenshots/` are the user-approved documentation exception.
 - Commit small working steps; pushing needs the user's permission.
 
 ## Commands (release by default)

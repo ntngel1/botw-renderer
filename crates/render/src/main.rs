@@ -348,7 +348,7 @@ fn main() -> AppExit {
     let plugins = DefaultPlugins
         .set(WindowPlugin {
             primary_window: Some(Window {
-                title: "botw рендерер".into(),
+                title: "botw renderer".into(),
                 resolution,
                 present_mode: if args.no_vsync {
                     PresentMode::AutoNoVsync
@@ -400,8 +400,9 @@ fn main() -> AppExit {
                 setup_scene(commands, media, start, args.occlusion_culling)
             },
         );
-    app.add_plugins((CameraPlugin, diagnostics::DiagnosticsPlugin));
+    app.add_plugins(CameraPlugin);
     if args.screenshot.is_none() {
+        app.add_plugins(diagnostics::DiagnosticsPlugin);
         app.add_plugins(viewer::ViewerPlugin { places, sampler });
     }
     app.run()

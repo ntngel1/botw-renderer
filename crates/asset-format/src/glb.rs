@@ -56,7 +56,7 @@ impl Asset {
     pub fn ours() -> Self {
         Self {
             version: "2.0".into(),
-            generator: "botw рендерер bake".into(),
+            generator: "botw renderer bake".into(),
         }
     }
 }

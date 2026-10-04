@@ -501,7 +501,7 @@ Fact (`0x03665ac0`, `0x036651c4`, `0x0366531c`, `0x036723a8`, `0x0366774c`):
 - `+0x274[6]`: the forecast of the current and next five bands, with the
   same overrides (modes `+0x380` 1–6).
 
-## 9. Gaps against the renderer (botw рендерер)
+## 9. Gaps against the renderer (botw renderer)
 
 Ported already: weather roll/transition, palettes, fog, clouds, bloom
 moisture, wind. Missing, all now specified above:

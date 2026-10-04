@@ -1,6 +1,7 @@
 /target
 # Baked game data and per-machine config: never in Git.
 /assets
+/assets-*/
 /renderer.toml
 /captures
 /screenshots/
